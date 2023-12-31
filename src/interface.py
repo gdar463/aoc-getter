@@ -4,9 +4,12 @@ import requests
 import time
 
 import cache
+import env_var
+import saver
 from exceptions import InputNotFoundException, InvalidSessionTokenException, ServerErrorException, custom_raise
 
 userAgent = "github.com/gdar463/aoc-getter by gdar463@gmail.com"
+download_path = env_var.get_download_path()
 
 
 def get_input_from_site(year: str, day: str, token: str, api_server: str) -> requests.Response:
@@ -28,23 +31,21 @@ def get_input_from_site(year: str, day: str, token: str, api_server: str) -> req
         custom_raise(ServerErrorException, request.status_code, request.text)
 
 
-def get_input(year: str, day: str, token: str, api_server: str) -> str:
+def get_input(year: str, day: str, token: str, api_server: str):
     token_hash = sha256(token.encode()).hexdigest()
     cached = cache.check_cache(year, day, token_hash)
     if type(cached) is str:
         with open(cache.get_cache_path().joinpath(cached), "rt") as f:
             body = f.read()
-        return body
+        saver.save_file(year, days, download_path, body)
     else:
         day_input = get_input_from_site(year, day, token, api_server).text
         cache.write_cache(year, day, token_hash, day_input)
-        return day_input
+        saver.save_file(year, day, download_path, day_input)
 
 
-def get_inputs(year: str, days: list[str], token: str, api_server: str) -> list[str]:
-    output: list[str] = []
+def get_inputs(year: str, days: list[str], token: str, api_server: str):
     for i, day in enumerate(days):
         if i != 0:
             time.sleep(240)
-        output.append(get_input(year, day, token, api_server))
-    return output
+        get_input(year, day, token, api_server)
