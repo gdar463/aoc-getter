@@ -22,7 +22,7 @@ A simple program to retrieve [Advent of Code](https://adventofcode.com) inputs
 6. When the program asks paste it in
 
 ***BE CAREFUL!***
-Don't share your token with anyone. If you want to check how your token is used follow the usage of the `token` variable in [main.py](main.py) from line 23
+Don't share your token with anyone. If you want to check how your token is used follow the usage of the `token` variable in [main.py](main.py) from line 22
 
 ## Parameters
 
@@ -50,6 +50,6 @@ If you have `AOC_API` set, you have to confirm that you want to use it as API We
 ## Automation Rules
 
 This script uses the following strategies to comply with the [Automation Guidelines](https://www.reddit.com/r/adventofcode/wiki/faqs/automation) found on the [r/adventofcode](https://www.reddit.com/r/adventofcode)'s wiki:
-* When multiple days are retrieved, line 48 in [src/interface.py](src/interface.py) will wait 4 minutes between requests
+* When multiple days are retrieved, line 49 in [src/interface.py](src/interface.py) will wait 4 minutes between requests
 * All of [src/cache.py](src/cache.py) file is dedicated for writing to and retrieve from the cache
-* The `User-Agent` header is specified on line 9 in [src/interface.py](src/interface.py) and use on line 16
+* The `User-Agent` header is specified on line 11 in [src/interface.py](src/interface.py) and used on line 19
