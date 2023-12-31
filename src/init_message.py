@@ -24,5 +24,6 @@ def init_message():
     print("You can request a single day setting " + Fore.LIGHTWHITE_EX + "Day(s)" + Fore.RESET + " to a number (es. " + Fore.LIGHTCYAN_EX + "\"1\"" + Fore.RESET + ", " + Fore.LIGHTCYAN_EX + "\"14\"" + Fore.RESET + ", " + Fore.LIGHTCYAN_EX + "\"19\"" + Fore.RESET + "), or multiple days using the format " + Fore.LIGHTCYAN_EX + "\"" + Fore.LIGHTYELLOW_EX + "<first day>" + Fore.LIGHTCYAN_EX + "-" + Fore.LIGHTYELLOW_EX + "<last day>" + Fore.LIGHTCYAN_EX + "\"" + Fore.RESET)
     print("If you request multiple days it might take, a while before the inputs will be downloaded (between each request there's a sleep of 4 minutes). So be patient.")
     print("If you have " + Fore.LIGHTBLUE_EX + "\"AOC_API\"" + Fore.RESET + " set, you have to confirm that you want to use it as API Website, by typing " + Fore.LIGHTGREEN_EX + "Y" + Fore.RESET + " when asked")
+    print("If you don't know how to obtain your " + Fore.LIGHTWHITE_EX + "Session Token" + Fore.RESET + " check the " + Fore.LIGHTGREEN_EX + "How to get your session token" + Fore.RESET + " in the " + Fore.LIGHTCYAN_EX + "README.md" + Fore.RESET + " file or go to https://github.com/gdar463/aoc-getter#How-to-get-your-session-token")
     print()
     print("After this line there'll be all the inputs.")
