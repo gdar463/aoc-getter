@@ -43,7 +43,7 @@ The cached items will be stored in `<Cache Path>/<random sha1 hash>`
 The inputs will be requested in the format of `<API Website>/<year>/day/<day>/input` (if the website uses a different format than default, change line 14 in src/interface.py to reflect it)   
    
 You can request a single day setting Day(s) to a number (es. `1`, `14`, `19`), or multiple days using the format `<first day>-<last day>`   
-If you request multiple days it might take, a while before the inputs will be downloaded (between each request there's a sleep of 4 minutes). So be patient.
+If you request multiple days it might take, a while before the inputs will be downloaded (between each request there's a sleep of 4 minutes). So be patient.   
 If you don't know how to obtain your Session Token check the How to get your session token in the README.md file or go to [How to get your session token](#How-to-get-your-session-token)   
 If you have `AOC_API` set, you have to confirm that you want to use it as API Website, by typing Y when asked   
    
