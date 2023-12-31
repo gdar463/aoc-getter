@@ -31,7 +31,7 @@ def get_api_server() -> str:
         return "https://adventofcode.com/"
     else:
         print("You seem to have the \"AOC_API\" enviromental variable")
-        selected = input("Do you want to use it as the API Website? (Y or N)")
+        selected = input("Do you want to use it as the API Website? (Y or N) ")
         return os.environ["AOC_API"] if selected == "Y" else "https://adventofcode.com/"
 
 
