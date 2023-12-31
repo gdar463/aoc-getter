@@ -2,6 +2,28 @@
 
 A simple program to retrieve [Advent of Code](https://adventofcode.com) inputs   
 
+## How to run
+
+1. If you haven't already, install [git](https://git-scm.com/downloads) and [python](https://www.python.org/downloads/)
+2. Run in a terminal `git clone https://github.com/gdar463/aoc-getter.git`
+3. Run in a terminal `cd aoc-getter`
+4. Run in a terminal `pip install -r requirements.txt`
+5. If you're on Windows run `py main.py`
+    5a. If you're on Mac or Linux run `python3 main.py`
+
+## How to get your session token
+
+1. Open in your browser [https://adventofcode.com](https://adventofcode.com)
+2. Press `F12` on your keyboard
+    2a. If a new part in your browser doesn't appear, try to press `Fn + F12`
+3. On the new part go in the `Storage` or `Application` tab, depending on the browser
+4. Find on the left list `Cookies`, open the dropdown menu and select the first item
+5. Double-click on the value of `session` in the right list and copy all the text
+6. When the program asks paste it in
+
+***BE CAREFUL!***
+Don't share your token with anyone. If you want to check how your token is used follow the usage of the `token` variable in [main.py](main.py) from line 23
+
 ## Parameters
 
 | Name          | Description                                         | Required | Value                                                                                           |
