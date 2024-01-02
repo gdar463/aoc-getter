@@ -9,7 +9,6 @@ import src.saver as saver
 from src.exceptions import InputNotFoundException, InvalidSessionTokenException, ServerErrorException, custom_raise
 
 userAgent = "github.com/gdar463/aoc-getter by gdar463@gmail.com"
-download_path = env_var.get_download_path()
 
 
 def get_input_from_site(year: str, day: str, token: str, api_server: str) -> requests.Response:
@@ -32,6 +31,7 @@ def get_input_from_site(year: str, day: str, token: str, api_server: str) -> req
 
 
 def get_input(year: str, day: str, token: str, api_server: str):
+    download_path = env_var.get_download_path()
     token_hash = sha256(token.encode()).hexdigest()
     cached = cache.check_cache(year, day, token_hash)
     if type(cached) is str:
