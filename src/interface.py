@@ -25,7 +25,7 @@ def get_input_from_site(year: str, day: str, token: str, api_server: str) -> req
     elif request.status_code == 400:
         custom_raise(InvalidSessionTokenException)
     elif request.status_code == 404:
-        custom_raise(InputNotFoundException, request.text)
+        custom_raise(InputNotFoundException, request.text, request.url)
     else:
         custom_raise(ServerErrorException, request.status_code, request.text)
 
