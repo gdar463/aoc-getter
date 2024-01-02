@@ -3,10 +3,10 @@ from hashlib import sha256
 import requests
 import time
 
-import cache
-import env_var
-import saver
-from exceptions import InputNotFoundException, InvalidSessionTokenException, ServerErrorException, custom_raise
+import src.cache as cache
+import src.env_var as env_var
+import src.saver as saver
+from src.exceptions import InputNotFoundException, InvalidSessionTokenException, ServerErrorException, custom_raise
 
 userAgent = "github.com/gdar463/aoc-getter by gdar463@gmail.com"
 download_path = env_var.get_download_path()

@@ -1,6 +1,6 @@
 import re
 
-from exceptions import InputNotFormattedCorrectlyException, Inputs, InvalidInputException, custom_raise
+from src.exceptions import InputNotFormattedCorrectlyException, Inputs, InvalidInputException, custom_raise
 
 
 def parse_days(stuff: str) -> list[str]:

@@ -8,14 +8,14 @@ except Exception as e:
     sys.exit("Before running this file you have to run \"pip install -r requirements.txt\"")
 
 import src.env_var as env_var
-from src.init_message import init_message
+import src.init_message as init_message
 import src.inputs as inputs
 import src.interface as interface
 
 if platform.system() == "Windows":
     just_fix_windows_console()
 
-init_message()
+init_message.init_message()
 
 year = inputs.get_year()
 days = inputs.get_days()
