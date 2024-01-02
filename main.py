@@ -7,10 +7,10 @@ except Exception as e:
     import sys
     sys.exit("Before running this file you have to run \"pip install -r requirements.txt\"")
 
-import env_var
-from init_message import init_message
-import inputs
-import interface
+import src.env_var as env_var
+from src.init_message import init_message
+import src.inputs as inputs
+import src.interface as interface
 
 if platform.system() == "Windows":
     just_fix_windows_console()
